@@ -11,6 +11,16 @@ const useDarkMode = key => {
     } else {
       body.classList.remove("dark-mode");
     }
+       const cards = document.querySelectorAll(".card");
+    if (darkModeValue == true) {
+      cards.forEach(card => {
+        card.classList.add("dark-mode-card")
+      });
+    } else {
+      cards.forEach(card => {
+        card.classList.remove("dark-mode-card")
+      })
+    }
   });
 
   return [darkModeValue, setDarkModeValue]
